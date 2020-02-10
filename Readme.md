@@ -23,17 +23,21 @@ This is a python script that can achieve spontaneous association with tapping fr
 
 
 ## Configuration Settings
+The wireless mouse used in this demo is: 
+- Microsoft Designer
+
 This needs the python site packages blew:
 - python 3.6
 - numpy 
 - sicpy
-- pybluez
-    
-    This package needs bluetooth lib from the drive layer. Install the libs from apt-get with code blew.
-
-- bluetooth lib 
+- bluetooth libs (install before pybluez)
     
     > sudo apt-get install libboost-python-dev libboost-thread-dev libbluetooth-dev libglib2.0-dev
+	
+- pybluez
+    
+    This package needs bluetooth lib from the drive layer. 
+
 
 
 ## FAQ
