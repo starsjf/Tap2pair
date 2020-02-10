@@ -6,12 +6,13 @@ This is the Demo software for Tap2pair work from the papers blew.
 [2] Zhang T, Yi X, Wang R, et al. Tap-to-Pair: Associating Wireless Devices with Synchronous Tapping[J]. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 2018, 2(4): 201.
 
 ## Abstract
-This is a python script that can achieve spontaneous association with tapping from the advertising device. More details can be found in the above papers.
+This is a python script that can achieve spontaneous association with tapping from the advertising device. In this demo, the association is between wireless mouse and laptop with bluetooth. More details can be found in the above papers.
 
 ## Using example
+
 - Firstly, modify "mouse_init" in the stdout_realtime.py into your own bluetooth mouse MAC. You can search the MAC of your mouse with "btmon".
 
-    > mouse_init= "E7:D4:38:A5:73:CD"  --> change it into your own mouse MAC.
+    > mouse_init= "E7:D4:38:A5:73:CD"  --> change it into your own mouse MAC. You can scan it with pybluez.
 
 - Secondly, using the code blew in the shell to active the script. 
 
@@ -19,14 +20,22 @@ This is a python script that can achieve spontaneous association with tapping fr
 
     The mode ('-m') should be 'fast' or 'slow' or 'near'. The 'fast' mode, will connect the adverting mouse with high tapping frequency. The 'low' mode, will connect the adverting mouse with low tapping frequency. The 'near' mode, will connect the adverting mouse with tapping and the RSSI of the signal is above a threshold. 
 
-    We detect the tapping frequency by finding the peack of the FFT of the RSSI signal. When the peak FFT is in the target frequency area and the amplitude of the peak is above a target threshold. 
+    We detect the tapping frequency by finding the peak of the FFT of the RSSI signal. When the peak FFT is in the target frequency area and the amplitude of the peak is above a target threshold. 
+
+- Mouse controling.
+    
+    The mouse should be switched into adverting mode with long press. Then by typing the mouse with different patterns to achieve adverting device actived association to the target laptop.
 
 
 ## Configuration Settings
-The wireless mouse used in this demo is: 
-- Microsoft Designer
+
+The laptop and wireless mouse used in this demo is: 
+
+- Mouse : Microsoft Designer
+- Laptop : DELL Precision 5520 / Thinkpad X1 carbon
 
 This needs the python site packages blew:
+
 - python 3.6
 - numpy 
 - sicpy
@@ -41,15 +50,16 @@ This needs the python site packages blew:
 
 
 ## FAQ
+
 1. Why the compling failed?
     
     Please make sure all the site packages are installed correctly. Most importantly, the bluetooth library should be installed firstly.
 
 2. Why it needs the MAC of the mouse?
 
-    Because the mouse we used ( Microsoft Designer) will change it's MAC while unbinding. It will change the forth part of the MAC by plusing one every time the binding changed.
+    Because the mouse we used (Microsoft Designer) will change it's MAC while unbinding. It will change the forth part of the MAC by pulsing  one every time the binding changed.
     
-    The script will add the mouse MAC and the MAC candicated list to the whitelist of the BLE searching. With this method, the searching protocols can filter the adverting devices into just the target mouse.
+    The script will add the mouse MAC and the MAC candidate  list to the whitelist of the BLE searching. With this method, the searching protocols can filter the adverting devices into just the target mouse.
 
 
 
