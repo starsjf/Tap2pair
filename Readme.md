@@ -6,7 +6,7 @@ This is the Demo software for Tap2pair work from the papers blew.
 [2] Zhang T, Yi X, Wang R, et al. Tap-to-Pair: Associating Wireless Devices with Synchronous Tapping[J]. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 2018, 2(4): 201.
 
 ## Abstract
-This is a python script that can achieve spontaneous association with tapping from the advertising device.
+This is a python script that can achieve spontaneous association with tapping from the advertising device. More details can be found in the above papers.
 
 ## Using example
 - Firstly, modify "mouse_init" in the stdout_realtime.py into your own bluetooth mouse MAC. You can search the MAC of your mouse with "btmon".
