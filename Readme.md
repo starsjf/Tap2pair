@@ -57,9 +57,9 @@ This needs the python site packages blew:
 
 2. Why it needs the MAC of the mouse?
 
-    Because the mouse we used (Microsoft Designer) will change it's MAC while unbinding. It will change the forth part of the MAC by pulsing  one every time the binding changed.
+    Because the mouse we used (Microsoft Designer) will change it's MAC while unbinding. It will change the forth part of the MAC by pulsing one every time the binding changed.
     
-    The script will add the mouse MAC and the MAC candidate  list to the whitelist of the BLE searching. With this method, the searching protocols can filter the adverting devices into just the target mouse.
+    The script will add the mouse MAC and the MAC candidate list to the whitelist of the BLE searching. With this method, the searching protocols can filter the adverting devices into just the target mouse.
 
 
 
